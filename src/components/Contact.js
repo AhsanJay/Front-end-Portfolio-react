@@ -12,7 +12,7 @@ function Contact() {
     e.preventDefault();
     setStatus('Sending...');
     try {
-      const response = await fetch('https://backend-ten-weld.vercel.app/api/contact', {
+      const response = await fetch('https://backend-port-mu.vercel.app/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
