@@ -7,16 +7,26 @@ import Footer from './components/Footer';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
-
+import ImageSlider from './components/ImageSlider';
+import Intro from './components/Intro';
+import Experience from './components/Experience';
+import AdditionalEx from './components/AdditionalEx';
 function App() {
   return (
     <Router>
       <Box>
         <Header />
-        <Container maxW="container.lg" mt={10}>
+        <ImageSlider />
+        <Container maxW="container.xxl" mt={10}>
           <VStack spacing={8}>
             <Routes>
-              <Route path="/" element={<><Skills /><Projects /></>} />
+              <Route path="/" element={<>
+              <Intro />
+              <Experience />
+              <Skills />
+              <AdditionalEx />
+              <Projects />
+              </>} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </VStack>
